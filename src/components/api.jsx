@@ -40,7 +40,7 @@ export async function getTrending() {
   export async function getMovieCast(movieId) {
     try {
       const resMovieCast = await axios.get(
-        `${baseURL}/search/movie/${movieId}/credits?api_key=${MY_ACCESS_KEY}`
+        `${baseURL}/movie/${movieId}/credits?api_key=${MY_ACCESS_KEY}`
       );
       return await resMovieCast.data
     } catch (error) {
